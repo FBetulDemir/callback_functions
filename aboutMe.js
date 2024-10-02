@@ -25,6 +25,15 @@ const displayDreamDestination = (callback) => {
   }, 3000);
 };
 
+const displayMyHobbies = (callback) => {
+  console.log("Fetching data ...");
+  setTimeout(() => {
+    const data = "I enjoy reading, hiking, and coding.";
+    console.log("After 3.5 seconds");
+    callback(data);
+  }, 3500);
+};
+
 const displayData = (data) => {
   console.log(data);
 };
@@ -39,6 +48,9 @@ displayFAvoriteTakeoutFood((data) => {
     displayData(data);
     displayDreamDestination((data) => {
       displayData(data);
+      displayMyHobbies((data) => {
+        displayData(data);
+      });
     });
   });
 });
